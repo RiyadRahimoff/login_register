@@ -35,5 +35,5 @@ This is a secure and scalable **Login/Register system** built with **Java Spring
 | Swagger | API documentation |
 
 ---
-## 🔐 Authentication Flow
+
 
