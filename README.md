@@ -27,10 +27,10 @@ This is a secure and scalable **Login/Register system** built with **Java Spring
 | Spring Security | Authentication & Authorization |
 | Spring Data JPA | Database access |
 | Redis | Refresh token storage |
-| MySQL | Main database |
+| PostgreSQL | Main database |
 | JWT | Access & refresh token system |
 | Lombok | Boilerplate removal |
-| MapStruct | DTO mapping |
+| Mapper | DTO mapping |
 | Docker | Containerization |
 | Swagger | API documentation |
 
