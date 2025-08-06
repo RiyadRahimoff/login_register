@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/azecoders_dev
+    username: root
+    password: Lenkeran5566
+
+  jpa:
+    open-in-view: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: codersaznoreply@gmail.com
+    password: "puzs jibf szal azrw"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  liquibase:
+    change-log: classpath:/liquibase/changelog-master.yml
+    drop-first: true
+
+
+redis:
+  uri: redis://localhost:6379
+
+minio:
+  url: http://localhost:9000
+  access-key: admin
+  secret-key: admin123
+  bucket:
+    profile: profile-photos
+
+server:
+  port: 5000
+
+jwt:
+  secret: 5c32083d4a3dc3686ec57373b2f1f240dd0f693abff056b0637088e1e2ae9ce2
+  expiration: 900000
+  refresh:
+    expiration: 604800000

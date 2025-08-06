@@ -1,0 +1,108 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20253000
+      author: Riyad Rahimov
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: VARCHAR(30)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: password
+                  type: VARCHAR(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: profile_photo
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: bio
+                  type: TEXT
+                  constraints:
+                    nullable: true
+
+              - column:
+                  name: profession
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: true
+
+              - column:
+                  name: user_status
+                  type: VARCHAR(16)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: user_role
+                  type: VARCHAR(20)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: is_enabled
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: is_premium
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: is_verified
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                    defaultValue: false
+
+              - column:
+                  name: profile_completed
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                    defaultValue: false
+
+              - column:
+                  name: verification_token
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: true
+
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: now()
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: true
